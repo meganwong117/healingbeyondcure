@@ -11,6 +11,12 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.new(story_params)
+
+    if @story.save
+      redirect_to story_path(@story)
+    else
+      render :new
+    end
   end
 
   def edit
