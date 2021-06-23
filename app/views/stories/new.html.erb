@@ -1,12 +1,17 @@
-<div class="new-form-container">
-  <h1>Add a New Story</h1>
-  <div class = "new-story-form">
-    <%= simple_form_for(@story) do |f| %>
-      <%= f.input :title, class: "form-control" %>
-      <%= f.input :description, class: "form-control" %>
-      <%= f.input :content, class: "form-control" %>
-      <%= f.button :submit, class:"button-primary" %>
-    <% end %>
+<div class="new-form-container d-flex justify-content-around">
+  <div class="add-story">
+    <div class="d-flex justify-content-around">
+      <h2>Add a New Story</h2>
+    </div>
+    <div class="new-story-form">
+      <%= simple_form_for(@story) do |f| %>
+        <%= f.input :title, class: "form-control" %>
+        <%= f.input :description, class: "form-control" %>
+        <%= f.input :content, class: "form-control" %>
+        <%= f.input :photo, as: :file %>
+        <%= f.button :submit, class:"submit-button" %>
+      <% end %>
+    </div>
   </div>
 </div>
 
