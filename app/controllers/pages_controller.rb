@@ -3,8 +3,10 @@ class PagesController < ApplicationController
   end
 
   def about
+    render template: "pages/#{params[:page]}"
   end
 
   def contact
+    render template: "pages/#{params[:page]}"
   end
 end

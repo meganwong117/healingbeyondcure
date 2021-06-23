@@ -1,16 +1,15 @@
-<div class="container">
-  <div class="cards-container">
-    <div class="cards">
-      <% @stories.each do |story| %>
+<div class="story-container">
+  <div class="cards">
+    <% @stories.each do |story| %>
+      <div class="story-photo-card">
         <% if story.photo.attached? %>
-          <%= link_to story_path(story), class: 'card-text' do %>
-            <div class="story-card" style="background image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path story.photo.key %>')">
-              <h3><%= story.title %></h3>
-              <p><%= story.description %></p>
-            </div>
-          <% end %>
+          <%= cl_image_tag story.photo.key, height: 280, width: 280, crop: :fill %>
         <% end %>
-      <% end %>
-    </div>
+        <div class="story-card">
+          <h3><%= story.title.upcase %></h3>
+          <p><%= story.description %></p>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

@@ -11,6 +11,7 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.new(story_params)
+
     if @story.save
       redirect_to story_path(@story)
     else
@@ -33,6 +34,7 @@ class StoriesController < ApplicationController
   end
 
   def show
+    @story = Story.find(params[:id])
   end
 
   private
