@@ -1,0 +1,28 @@
+.button {
+  font-family: 'Montserrat', sans-serif;
+  border: #EA2361 solid 1px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #FAE9EE;
+  color: #EA2361;
+  outline: none;
+  transition: background 0.3s ease;
+} .button:hover {
+  color: #EA2361;
+  background-color: #FAD8E3;
+}
+
+.submit-button {
+  font-family: 'Montserrat', sans-serif;
+  border: #EA2361 solid 1px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: #FAE9EE;
+  color: #EA2361;
+  outline: none;
+  transition: background 0.3s ease;
+  text-align: center;
+} .submit-button:hover {
+  color: #EA2361;
+  background-color: #FAD8E3;
+}

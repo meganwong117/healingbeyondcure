@@ -1,5 +1,5 @@
 class StoriesController < ApplicationController
-  before_action :set_story, only: [ :show, :edit, :destroy ]
+  before_action :set_story, only: [:show, :edit, :destroy]
 
   def index
     @stories = Story.all
@@ -42,6 +42,6 @@ class StoriesController < ApplicationController
   end
 
   def story_params
-    params.require(:story).permit(:title, :content, :comments)
+    params.require(:story).permit(:title, :content, :comments, :description, :photo)
   end
 end

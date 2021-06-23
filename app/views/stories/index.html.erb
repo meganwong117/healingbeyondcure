@@ -1,10 +1,16 @@
-<div class="cards">
-  <div class="stories-grid">
-    <% @stories.each do |story| %>
-      <div class="story-card">
-        <h3><%= story.title %></h3>
-        <p><%= story.description %></p>
-      </div>
-    <% end %>
+<div class="container">
+  <div class="cards-container">
+    <div class="cards">
+      <% @stories.each do |story| %>
+        <% if story.photo.attached? %>
+          <%= link_to story_path(story), class: 'card-text' do %>
+            <div class="story-card" style="background image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('<%= cl_image_path story.photo.key %>')">
+              <h3><%= story.title %></h3>
+              <p><%= story.description %></p>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
