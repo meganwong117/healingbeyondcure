@@ -1,0 +1,10 @@
+<div class="cards">
+  <div class="stories-grid">
+    <% @stories.each do |story| %>
+      <div class="story-card">
+        <h3><%= story.title %></h3>
+        <p><%= story.description %></p>
+      </div>
+    <% end %>
+  </div>
+</div>

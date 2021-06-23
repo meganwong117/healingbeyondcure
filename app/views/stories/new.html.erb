@@ -1,0 +1,12 @@
+<div class="new-form-container">
+  <h1>Add a New Story</h1>
+  <div class = "new-story-form">
+    <%= simple_form_for(@story) do |f| %>
+      <%= f.input :title, class: "form-control" %>
+      <%= f.input :description, class: "form-control" %>
+      <%= f.input :content, class: "form-control" %>
+      <%= f.button :submit, class:"button-primary" %>
+    <% end %>
+  </div>
+</div>
+
