@@ -5,3 +5,16 @@
 .about-container h1 {
   font-size: 48px;
 }
+#about {
+  list-style: none;
+  display: flex;
+  margin: auto;
+  position: fixed;
+  text-align: center;
+}
+#about a {
+  color: white;
+}
+#about a:hover {
+  text-decoration: none;
+}
