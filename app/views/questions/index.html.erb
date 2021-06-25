@@ -1,0 +1,9 @@
+<div class="question-container">
+  <div class="cards">
+    <% @questions.each do |question| %>
+      <div class="question-card">
+        <h3><%= question.name %></h3>
+      </div>
+    <% end %>
+  </div>
+</div>
