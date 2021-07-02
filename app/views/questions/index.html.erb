@@ -1,7 +1,7 @@
 <div class="question-container">
-  <div class="cards">
-    <% @questions.each do |question| %>
-      <div class="question-card">
+  <div class="questions">
+    <% @questions.order(:created_at).each do |question| %>
+      <div class="card" id="question-content">
         <h3><%= question.name %></h3>
       </div>
     <% end %>
